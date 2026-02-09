@@ -1,0 +1,127 @@
+/* Links principales del menú */
+.menu-link {
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #333;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: #d7d5d5;
+    color: #4c1e1e;
+}
+
+/* Links de submenú */
+.submenu-link {
+    display: block;
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    color: #333;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.submenu-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* ==========================================
+   NAVIGATION.CSS
+   Menú de categorías y submenús
+   ========================================== */
+
+/* Contenedor principal del menú */
+.categories {
+    width: 100%;
+    background: #f4f4f4;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+}
+
+/* Scrollbar personalizado */
+.categories::-webkit-scrollbar {
+    height: 6px;
+}
+
+.categories::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+/* Lista de categorías */
+.categorias-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    gap: 15px;
+    margin: 0;
+    padding: 0 10px;
+    list-style: none;
+}
+
+/* Items de categoría */
+.categorias-list > li {
+    position: relative; /* IMPORTANTE: Para posicionar submenús */
+    white-space: nowrap;
+    padding: 0;
+}
+
+/* ==========================================
+   SUBMENÚS (Hardcodeados en HTML)
+   ========================================== */
+
+/* Ocultar submenús por defecto */
+.categorias-list ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Justo debajo del padre */
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 180px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+/* Mostrar submenu al hover */
+.categorias-list li:hover > ul {
+    display: block;
+}
+
+/* Items del submenu */
+.categorias-list ul li {
+    white-space: nowrap;
+}
+
+/* ==========================================
+   RESPONSIVO
+   ========================================== */
+
+@media (max-width: 768px) {
+    .categorias-list {
+        gap: 10px;
+        padding: 0 10px;
+    }
+    
+    .categorias-list > li > a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .categorias-list ul {
+        min-width: 150px;
+    }
+}

@@ -1,0 +1,145 @@
+/* ==========================================
+   PANEL DE MÉTRICAS
+   ========================================== */
+
+.modal-metricas {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.modal-metricas-contenido {
+    background-color: white;
+    padding: 0;
+    border-radius: 15px;
+    max-width: 1200px;
+    width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.panel-metricas {
+    padding: 30px;
+}
+
+.header-metricas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+.header-metricas h2 {
+    margin: 0;
+    color: #333;
+}
+
+.filtro-periodo select {
+    padding: 10px 20px;
+    border: 2px solid #2196F3;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    background: white;
+    color: #2196F3;
+    font-weight: bold;
+}
+
+.filtro-periodo select:focus {
+    outline: none;
+    border-color: #1976D2;
+}
+
+.grid-metricas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-metrica {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.tarjeta-metrica:hover {
+    border-color: #2196F3;
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.2);
+    transform: translateY(-5px);
+}
+
+.tarjeta-metrica h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.autor-metrica {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-icono {
+    font-size: 2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-numero {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    opacity: 0.9;
+    display: block;
+    margin-top: 5px;
+}
+
+.fecha-publicacion {
+    color: #999;
+    font-size: 0.9em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.sin-metricas {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 1.2em;
+}

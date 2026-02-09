@@ -1,0 +1,60 @@
+/* ==========================================
+   LAYOUT.CSS
+   Estructura general de la página
+   ========================================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* ==========================================
+   PANTALLA DE INICIO
+   ========================================== */
+
+#pantalla-inicio {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#pantalla-inicio h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#pantalla-inicio p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+   ========================================== */
+
+#main-content {
+    min-height: 800px;
+}
+
+/* ==========================================
+   RESPONSIVO
+   ========================================== */
+
+@media (max-width: 768px) {
+    #pantalla-inicio h1 {
+        font-size: 2em;
+    }
+    
+    #pantalla-inicio p {
+        font-size: 1em;
+    }
+}

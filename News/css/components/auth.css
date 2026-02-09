@@ -1,0 +1,126 @@
+/* ================================
+   ESTILOS PARA VERIFICACIÓN EMAIL
+   Agrega esto a tu CSS principal
+   ================================ */
+
+/* Texto de verificación */
+.texto-verificacion {
+    background: #e8f4f8;
+    border-left: 4px solid #0288d1;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.texto-verificacion strong {
+    color: #0277bd;
+    font-weight: 600;
+}
+
+/* Input de código de verificación */
+#codigo-verificacion {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 8px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+#codigo-verificacion::placeholder {
+    letter-spacing: normal;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Opciones de verificación */
+.opciones-verificacion {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.opciones-verificacion p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Botón secundario */
+.btn-secundario {
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.btn-secundario:hover {
+    background: #e0e0e0;
+    border-color: #bbb;
+}
+
+/* Credenciales demo */
+.credenciales-demo {
+    background: #fff9e6;
+    border: 1px solid #ffe082;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.credenciales-demo h4 {
+    margin: 0 0 10px 0;
+    color: #f57c00;
+    font-size: 14px;
+}
+
+.credenciales-demo p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #555;
+}
+
+.btn-demo {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.btn-demo:hover {
+    background: #f57c00;
+}
+
+/* Mensaje de ayuda */
+small {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    #codigo-verificacion {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+    
+    .btn-secundario {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+}

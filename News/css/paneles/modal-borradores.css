@@ -1,0 +1,115 @@
+/* ==========================================
+   MODAL DE BORRADORES
+   ========================================== */
+
+.modal-borradores {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.modal-borradores-contenido {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-borradores-contenido h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.lista-borradores {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tarjeta-borrador {
+    background: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.tarjeta-borrador:hover {
+    border-color: #2196F3;
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+}
+
+.borrador-info h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.borrador-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.fecha-borrador {
+    color: #999 !important;
+    font-size: 0.9em;
+    margin-top: 10px !important;
+}
+
+.borrador-acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-cargar-borrador,
+.btn-eliminar-borrador {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-cargar-borrador {
+    background: #2196F3;
+    color: white;
+}
+
+.btn-cargar-borrador:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+}
+
+.btn-eliminar-borrador {
+    background: #f44336;
+    color: white;
+}
+
+.btn-eliminar-borrador:hover {
+    background: #d32f2f;
+    transform: translateY(-2px);
+}
+
+.sin-borradores {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 1.1em;
+}

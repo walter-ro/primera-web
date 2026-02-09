@@ -1,0 +1,234 @@
+/* Panel de administración flotante */
+.admin-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.admin-panel.oculto {
+    transform: translateX(100%);
+}
+
+.admin-panel-header {
+    background: #2196F3;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-cerrar-panel {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.admin-panel-menu {
+    background: #f5f5f5;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-menu-btn {
+    background: white;
+    border: 2px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.admin-menu-btn:hover {
+    background: #2196F3;
+    color: white;
+    border-color: #2196F3;
+}
+
+
+
+/* Botón flotante para abrir panel */
+.btn-admin-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+    z-index: 9999;
+    font-size: 16px;
+    pointer-events: auto;
+}
+
+.btn-admin-flotante:hover {
+    background: #1976D2;
+    transform: scale(1.05);
+}
+
+/* Gestión de usuarios */
+.usuario-item {
+    background: white;
+    border: 2px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usuario-item.inactivo {
+    opacity: 0.6;
+    border-color: #f44336;
+}
+
+.usuario-info h4 {
+    margin: 0 0 10px 0;
+}
+
+.usuario-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.usuario-acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.select-rol {
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+.btn-toggle {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Gestión de noticias */
+.noticia-admin-item {
+    background: white;
+    border: 2px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.noticia-admin-item.tiene-reportes {
+    border-color: #ff9800;
+    background: #fff3e0;
+}
+
+.noticia-admin-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.reportes-activos {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+/* Formularios de creación */
+.crear-usuario-form {
+    max-width: 500px;
+}
+
+.btn-crear-usuario {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Reportes */
+.reporte-item {
+    background: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.reporte-acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-aprobar {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-eliminar-reporte {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-panel-content {
+    flex: 1;
+    overflow-y: auto;  /* ← Ya lo tienes */
+    overflow-x: hidden; /* ← Agregar esto */
+    padding: 20px;
+    max-height: calc(100vh - 250px); /* ← AGREGAR ESTO */
+}
+
+/* Agregar esto para mejor scroll: */
+.admin-panel-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.admin-panel-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.admin-panel-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.admin-panel-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

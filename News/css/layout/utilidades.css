@@ -1,0 +1,9 @@
+/* ==========================================
+   UTILIDADES
+   ========================================== */
+
+   /* OJO == AQUI ESTA LA FUNCION PARA OCULTAR EL FORMULARIO == OJO  */
+
+.oculto {
+    display: none !important;
+}

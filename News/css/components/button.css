@@ -1,0 +1,85 @@
+/* ==========================================
+   BUTTONS.CSS
+   Botones de la aplicación
+   ========================================== */
+
+/* ==========================================
+   BOTÓN VOLVER
+   ========================================== */
+
+.btn-volver {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #555;
+}
+
+.btn-volver:active {
+    transform: translateY(1px);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+    .btn-volver {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+
+/* ==========================================
+   BOTÓN DE ELIMINAR
+   ========================================== */
+.media-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+.btn-remove-media {
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-remove-media:hover {
+    background: #cc0000;
+}
+
+.media-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-custom {
+    flex: 1;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-custom:hover {
+    background: #1976D2;
+}

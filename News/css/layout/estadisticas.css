@@ -1,0 +1,194 @@
+/* ==========================================
+   CSS ESTADÍSTICAS
+   ========================================== */
+
+/* ==========================================
+   2. PANELES DE ESTADÍSTICAS
+   ========================================== */
+
+.panel-estadisticas {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #eee;
+}
+
+.panel-header h1 {
+    margin: 0;
+    color: #333;
+}
+
+/* Grid de estadísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.stat-card h3 {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.stat-numero {
+    font-size: 42px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+.stat-card small {
+    color: #999;
+    font-size: 12px;
+}
+
+/* ==========================================
+   3. DETALLES Y TABLAS
+   ========================================== */
+
+.stat-detalle {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.stat-detalle h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+.stat-detalle p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.stat-tabla {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.stat-tabla h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+.stat-tabla table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stat-tabla thead {
+    background: #f5f5f5;
+}
+
+.stat-tabla th,
+.stat-tabla td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.stat-tabla th {
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-tabla tr:hover {
+    background: #f9f9f9;
+}
+
+/* ==========================================
+   4. ALERTAS
+   ========================================== */
+
+.alertas-section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.alertas-section h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.alerta {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 4px solid;
+}
+
+.alerta-alta {
+    background: #ffebee;
+    border-color: #f44336;
+    color: #c62828;
+}
+
+.alerta-media {
+    background: #fff3e0;
+    border-color: #ff9800;
+    color: #e65100;
+}
+
+.alerta-baja {
+    background: #e8f5e9;
+    border-color: #4CAF50;
+    color: #2e7d32;
+}
+
+/* ==========================================
+   7. RESPONSIVO
+   ========================================== */
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-numero {
+        font-size: 32px;
+    }
+    
+    .panel-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

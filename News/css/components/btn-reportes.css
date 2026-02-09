@@ -1,0 +1,118 @@
+/* Acciones de comentario */
+.comentario-acciones {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.acciones-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.acciones-derecha {
+    margin-left: auto;
+}
+
+/* Botón de reportar */
+.btn-reportar {
+    background: none;
+    border: 1px solid #ff9800;
+    color: #ff9800;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: all 0.3s;
+}
+
+.btn-reportar:hover {
+    background: #ff9800;
+    color: white;
+}
+
+/* Modal de reporte */
+.modal-reporte {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-contenido {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: #000;
+}
+
+.select-motivo,
+#detalle-reporte {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.botones-modal {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-cancelar,
+.btn-enviar-reporte {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-cancelar {
+    background: #ddd;
+    color: #333;
+}
+
+.btn-cancelar:hover {
+    background: #ccc;
+}
+
+.btn-enviar-reporte {
+    background: #ff5252;
+    color: white;
+}
+
+.btn-enviar-reporte:hover {
+    background: #ff1744;
+}
+

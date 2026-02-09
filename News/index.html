@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World News</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <h1 class="logo" id="logo-inicio">US news</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" id="join-now">Join now</a></li>
+                    <li><a href="#" id="log-in">Log in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PANEL DE ADMINISTRACIÓN (Solo visible para admins) -->
+        <div id="admin-panel" class="admin-panel oculto">
+            <div class="admin-panel-header">
+                <h2>🎯 Panel de Administración</h2>
+                <button onclick="cerrarPanelAdmin()" class="btn-cerrar-panel">✖️</button>
+            </div>
+            <div id="panel-dinamico" style="display: none;">
+                 <!-- Aquí se renderizarán las estadísticas dinámicamente -->
+            </div>  
+            <button onclick="abrirPanelReportes()" class="btn-panel-reportes">
+                🚨 Reportes 
+                <span id="contador-reportes-pendientes" class="badge-contador"></span>
+            </button>
+            
+            <div class="admin-panel-menu">
+
+                <!-- PANEL DE ADMINISTRACIÓN (Solo visible para admins) -->
+                <div id="admin-panel" class="admin-panel oculto">
+                    <button id="btn-admin-panel" class="btn-admin-access" style="display: none;">
+                        🎯 Panel de Administración
+                    </button>
+                    
+                    <div id="admin-panel-content" class="admin-panel-content">
+                        <!-- Aquí se cargará el contenido dinámicamente -->
+                    </div>
+                </div>
+
+                <button onclick="mostrarGestionNoticias()" class="admin-menu-btn">
+                    📰 Gestión de Noticias
+                </button>
+                <button onclick="mostrarPanelEstadisticas()" class="admin-menu-btn">
+                    📊 Estadísticas Globales
+                </button>
+                <button onclick="abrirPanelMetricas()" class="btn-metricas">
+                    📊 Métricas
+                </button>
+                <button onclick="mostrarReportesPendientes()" class="admin-menu-btn">
+                    ⚠️ Reportes Pendientes
+                </button>
+                    <!-- ⭐ NUEVO BOTÓN -->
+                <button onclick="mostrarEditorNoticias()" class="admin-menu-btn">
+                    ✍️ Crear Noticia
+                </button>
+                <button onclick="mostrarCrearEditor()" class="admin-menu-btn">
+                    ➕ Crear Editor
+                </button>
+                <button onclick="mostrarCrearSubAdmin()" class="admin-menu-btn">
+                    ➕ Crear Sub-Admin
+                </button>
+            </div>
+            
+            <div id="admin-panel-content" class="admin-panel-content">
+                <!-- Aquí se cargará el contenido dinámicamente -->
+            </div>
+
+        </div>
+
+        <!-- Botón flotante para abrir panel (solo admins) -->
+        <button id="btn-abrir-admin-panel" class="btn-admin-flotante oculto" onclick="abrirPanelAdmin()">
+            ⚙️ Admin
+        </button>
+
+    <nav class="categories">
+        <ul class="categorias-list">
+            <li><a class="menu-link" href="#" data-target="serial-killers">Serial Killers</a></li>
+            <li><a class="menu-link" href="#" data-target="dark-innovation">Dark Innovation</a>
+                <ul>
+                    <li><a class="submenu-link" href="#" data-target="experimental-failures">Experimental Failures</a></li>
+                    <li><a class="submenu-link" href="#" data-target="forgotten-technologies">Forgotten Technologies</a></li>
+                    <li><a class="submenu-link" href="#" data-target="Software">Software</a></li>
+                    <li><a class="submenu-link" href="#" data-target="deception-files">Deception Files</a></li>
+                </ul>
+            </li>
+            <li><a class="menu-link" href="#" data-target="fun-facts">Fun facts</a></li>
+            <li><a class="menu-link" href="#" data-target="shadow-market">Shadow Market</a>
+                <ul>
+                    <li><a class="submenu-link" href="#" data-target="books">Books</a></li>
+                    <li><a class="submenu-link" href="#" data-target="clothing">Clothing</a></li>
+                    <li><a class="submenu-link" href="#" data-target="ritual-games">Ritual Games</a></li>
+                    <li><a class="submenu-link" href="#" data-target="miscellaneous">Miscellaneous</a></li>
+                    <li><a class="submenu-link" href="#" data-target="crystals-&-minerals">Crystals & Minerals</a></li>                     
+                </ul>
+            </li>
+            <li><a class="menu-link" href="#" data-target="gaming">Gaming</a>
+                <ul>
+                    <li><a class="submenu-link" href="#" data-target="future-teller">Future Teller</a></li>
+                    <li><a class="submenu-link" href="#" data-target="ouija">Ouija</a></li>
+                    <li><a class="submenu-link" href="#" data-target="tarot">Tarot</a></li>
+                </ul>
+            </li>
+            <li><a class="menu-link" href="#" data-target="strange-phenomena">Strange Phenomena</a>
+                <ul>
+                    <li><a class="submenu-link" href="#" data-target="supernatural">Supernatural</a></li>
+                    <li><a class="submenu-link" href="#" data-target="uaps">UAPs</a></li>
+                    <li><a class="submenu-link" href="#" data-target="urban-legends">Urban Legends</a></li>
+                    <li><a class="submenu-link" href="#" data-target="angelic-or-demonic">Angelic or Demonic</a></li>
+                    <li><a class="submenu-link" href="#" data-target="possessions">Possessions</a></li>
+                    <li><a class="submenu-link" href="#" data-target="rituals">Rituals</a></li>
+                </ul>
+            </li>
+            <li><a class="menu-link" href="#" data-target="crime">Crime</a>
+                <ul>
+                    <li><a class="submenu-link" href="#" data-target="psychology-profiles">Psychology & Profiles</a></li>
+                    <li><a class="submenu-link" href="#" data-target="white-collar">White-collar Crime</a></li>
+                    <li><a class="submenu-link" href="#" data-target="cold-cases">Cold Cases</a></li>
+                    <li><a class="submenu-link" href="#" data-target="most-wanted">The most wanted</a></li>
+                </ul>
+            </li>
+            <li><a class="menu-link" href="#" data-target="conspiracies">Conspiracies</a></li>
+        </ul>
+    </nav>
+
+
+        <section id="admin-area" class="oculto">
+            <h2>Add News</h2>
+            <form id="news-form">
+                <div class="editor-container">
+                        <!-- PANEL DE BLOQUES -->
+                        <div class="blocks-panel">
+                            <h2>📦 Bloques Disponibles</h2>
+                            
+                            <button class="block-button" onclick="addBlock('title', 'h1')">
+                                <span class="block-icon">H1</span> Título Principal
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('title', 'h2')">
+                                <span class="block-icon">H2</span> Título Secundario
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('title', 'h3')">
+                                <span class="block-icon">H3</span> Subtítulo
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('paragraph')">
+                                <span class="block-icon">¶</span> Párrafo
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('image')">
+                                <span class="block-icon">🖼️</span> Imagen
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('video')">
+                                <span class="block-icon">▶️</span> Video
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('quote')">
+                                <span class="block-icon">💬</span> Cita
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('divider')">
+                                <span class="block-icon">—</span> Divisor
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('facts')">
+                                <span class="block-icon">💡</span> Caja de Datos
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('timeline')">
+                                <span class="block-icon">⏱️</span> Línea de Tiempo
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('button')">
+                                <span class="block-icon">🔘</span> Botón
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('table')">
+                                <span class="block-icon">📊</span> Tabla
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('columns', 2)">
+                                <span class="block-icon">⚏</span> 2 Columnas
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('columns', 3)">
+                                <span class="block-icon">⚏</span> 3 Columnas
+                            </button>
+                            
+                            <button class="block-button" onclick="addBlock('embed')">
+                                <span class="block-icon">🔗</span> Código Embed
+                            </button>
+                        </div>
+
+                        <!-- ÁREA DE TRABAJO -->
+                        <div class="workspace">
+                            <div class="workspace-header">
+                                <input type="text" placeholder="Título de tu noticia..." id="mainTitle">
+                            </div>
+
+                            <div class="content-blocks" id="contentBlocks">
+                                <div class="empty-state">
+                                    <h3>👈 Selecciona bloques para comenzar</h3>
+                                    <p>Agrega títulos, texto, imágenes y más para crear tu noticia</p>
+                                </div>
+                            </div>
+
+                            <div class="workspace-actions" style="display: flex; gap: 10px; margin-top: 20px;">
+                                <!-- Botón de Vista Previa -->
+                                <button type="button" onclick="previewPost()" class="btn-preview" style="background: #9C27B0; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                                    👁️ Vista Previa
+                                </button>
+                                
+                                <!-- Botón de Guardar Borrador -->
+                                <button type="button" onclick="saveDraft()" class="btn-borrador">
+                                    💾 Guardar Borrador
+                                </button>
+                                
+                                <!-- Botón de Ver Borradores -->
+                                <button type="button" onclick="abrirModalBorradores()" class="btn-ver-borradores">
+                                    📝 Mis Borradores
+                                </button>
+                                
+                                <!-- Botón de Publicar -->
+                                <button type="button" onclick="savePost()" class="btn-publish" style="background: #4CAF50; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                                    ✅ Publicar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+        </section>
+
+        <main id="main-content">
+            <section id="news-list">
+                <h2>News</h2>
+                <div id="noticias-container"></div>
+            </section>
+        </main>
+
+    <script type="module" src="js/authentication/Permisos.js"></script>
+    <script src="js/admin/usuarios.js"></script>
+    <script type="module" src="js/authentication/config.js"></script>
+    <script src="js/modules/form.js"></script>
+    <script src="js/admin/panel.js"></script>
+    <script src="js/modules/comentarios.js"></script>
+    <script src="js/data/sistemas-vistas.js"></script>
+    <script type="module" src="js/login/login.js"></script>
+    <script src="js/login/login-ui.js"></script>
+    <script src="js/admin/admin-historial.js"></script>
+    <script src="js/admin/admin-acciones.js"></script>
+    <script src="js/admin/admin-personal.js"></script>
+    <script src="js/admin/admin-main.js"></script>
+    <script src="js/modules/estadisticas.js"></script>
+    <script src="js/modules/noticias-render.js"></script>
+    <script type='module' src="js/main.js"></script>
+    <script type="module" src="js/data/usuarios-data.js"></script>
+    <script src="js/modules/metricas-avanzadas.js"></script>
+    <script src="js/modules/noticias-admin.js"></script>
+    <script src="js/modules/noticias.js"></script>
+    <script src="js/authentication/crea-admin.js"></script>
+    <script src="js/modules/metricas.js"></script>
+    <script src="js/modules/render-stats.js"></script>
+    <script src="js/modules/panel-adm.js"></script>
+    <script src="js/components/workboard.js"></script>
+    <script src="js/modules/header.js"></script>
+    <script src="js/likes/likes-comentarios.js"></script>
+    <script src="js/metricas/mediciones.js"></script>
+    <script src="js/metricas/subEditor.js"></script>
+    <script src="js/metricas/usuarios.js"></script>
+    <script src="js/reportes/reportes.js"></script>
+    <script src="js/reportes/notificaciones.js"></script>
+    <script src="js/components/compartir.js"></script>
+    <script src="js/components/borradores.js"></script>
+
+
+    
+</body>
+</html>
+
+

@@ -1,0 +1,30 @@
+.btn-like {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-like:hover {
+    background: #ffe0e0;
+}
+
+.btn-like.liked {
+    background: #ff4444;
+    color: white;
+    border-color: #ff4444;
+}
+
+.comentario-acciones {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.likes-count {
+    color: #666;
+    font-size: 0.9em;
+}

@@ -1,0 +1,103 @@
+/* ==========================================
+   BOTONES DEL EDITOR (para borradores)
+   ========================================== */
+
+.editor-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-borrador {
+    background: #FF9800;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+.btn-borrador:hover {
+    background: #F57C00;
+    transform: translateY(-2px);
+}
+
+.btn-ver-borradores {
+    background: #9C27B0;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+.btn-ver-borradores:hover {
+    background: #7B1FA2;
+    transform: translateY(-2px);
+}
+
+.btn-metricas {
+    background: #00BCD4;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+.btn-metricas:hover {
+    background: #0097A7;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+    .modal-borradores-contenido,
+    .modal-preview-contenido,
+    .modal-metricas-contenido {
+        width: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    
+    .preview-body {
+        padding: 20px;
+    }
+    
+    .preview-title {
+        font-size: 1.8em;
+    }
+    
+    .botones-compartir {
+        flex-direction: column;
+    }
+    
+    .btn-compartir {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .grid-metricas {
+        grid-template-columns: 1fr;
+    }
+    
+    .estadisticas {
+        grid-template-columns: 1fr;
+    }
+    
+    .borrador-acciones {
+        flex-direction: column;
+    }
+}
